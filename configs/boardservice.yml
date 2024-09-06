@@ -1,5 +1,5 @@
 server:
-  port: 4003
+  port: 5003
 
   # 데이터베이스 설정
   datasource:
