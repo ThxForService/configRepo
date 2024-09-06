@@ -19,8 +19,8 @@ spring:
         lowerCaseServiceId: true
 
       routes:
-        - id: member-service
-          uri: lb://member-service
+        - id: memberservice
+          uri: lb://memberservice
           predicates:
               - Path=/api/v1/member/**
           filters:
