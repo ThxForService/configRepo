@@ -1,7 +1,6 @@
 server:
-  port: 5001
+  port: 4003
 
-spring:
   # 데이터베이스 설정
   datasource:
     driverClassName: oracle.jdbc.driver.OracleDriver
@@ -36,7 +35,6 @@ eureka:
     serviceUrl:
       defaultZone: ${eurekaHost}/eureka/
 
-
 # 액추에이터 설정
 management:
   endpoint:
@@ -49,16 +47,9 @@ management:
       exposure:
         include: health, refresh
 
-
-# JWT 설정
-jwt:
-  secret: ${jwtSecret}
-  validSeconds: ${jwtValidSeconds}
-
 cors:
   allow:
     origins: http://joyfarm.xyz
-
 
 springdoc:
   version: '1.0.0'
