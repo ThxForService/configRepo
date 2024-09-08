@@ -37,8 +37,24 @@ spring:
               - Path=/api/v1/file/**
           filters:
               - RewritePath=/api/v1/file/?(?<path>.*),/$\{path}
-
-
+        - id: reservationservice
+          uri: lb://reservationservice
+          predicates:
+              - Path=/api/v1/reservation/**
+          filters:
+              - RewritePath=/api/v1/reservation/?(?<path>.*),/$\{path}
+        - id: surveyservice
+          uri: lb://surveyservice
+          predicates:
+              - Path=/api/v1/survey/**
+          filters:
+              - RewritePath=/api/v1/survey/?(?<path>.*),/$\{path}
+        - id: chattingservice
+          uri: lb://chattingservice
+          predicates:
+              - Path=/api/v1/chatting/**
+          filters:
+              - RewritePath=/api/v1/chatting/?(?<path>.*),/$\{path}
 
 # 유레카 설정
 eureka:
