@@ -10,7 +10,8 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins:
-              - 'http://localhost:6000'
+              - 'http://localhost:7000'
+              - 'http://localhost:7001'
               - 'http://15.165.135.23:5000'
               - 'http://thxforservice.xyz'
               - 'http://www.thxforservice.xyz'
