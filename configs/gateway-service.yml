@@ -11,6 +11,9 @@ spring:
           '[/**]':
             allowedOrigins:
               - 'http://localhost:6000'
+              - 'http://15.165.135.23:5000'
+              - 'http://thxforservice.xyz'
+              - 'http://www.thxforservice.xyz'
             allowCredentials: true # 요청시 인증 정보 전송 허가
             allowedHeaders: '*'
             allowedMethods: '*'
