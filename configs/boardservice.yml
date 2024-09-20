@@ -53,7 +53,7 @@ management:
 
 cors:
   allow:
-    origins: 'http://localhost:7000'
+    origins: 'http://localhost:7001'
 
 springdoc:
   version: '1.0.0'
