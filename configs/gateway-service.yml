@@ -11,11 +11,11 @@ spring:
           '[/**]':
             allowedOrigins:
               - '*'
-              #- 'http://localhost:7000'
-              #- 'http://localhost:7001'
-              #- 'http://15.165.135.23:5000'
-              #- 'http://thxforservice.xyz'
-              #- 'http://www.thxforservice.xyz'
+            #- 'http://localhost:7000'
+            #- 'http://localhost:7001'
+            #- 'http://15.165.135.23:5000'
+            #- 'http://thxforservice.xyz'
+            #- 'http://www.thxforservice.xyz'
             #allowCredentials: true # 요청시 인증 정보 전송 허가
             allowedHeaders: '*'
             allowedMethods: '*'
@@ -27,39 +27,39 @@ spring:
         - id: memberservice
           uri: lb://memberservice
           predicates:
-              - Path=/api/v1/member/**
+            - Path=/api/v1/member/**
           filters:
-              - RewritePath=/api/v1/member/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/member/?(?<path>.*),/$\{path}
         - id: boardservice
           uri: lb://boardservice
           predicates:
-              - Path=/api/v1/board/**
+            - Path=/api/v1/board/**
           filters:
-              - RewritePath=/api/v1/board/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/board/?(?<path>.*),/$\{path}
         - id: fileservice
           uri: lb://fileservice
           predicates:
-              - Path=/api/v1/file/**
+            - Path=/api/v1/file/**
           filters:
-              - RewritePath=/api/v1/file/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/file/?(?<path>.*),/$\{path}
         - id: reservationservice
           uri: lb://reservationservice
           predicates:
-              - Path=/api/v1/reservation/**
+            - Path=/api/v1/reservation/**
           filters:
-              - RewritePath=/api/v1/reservation/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/reservation/?(?<path>.*),/$\{path}
         - id: surveyservice
           uri: lb://surveyservice
           predicates:
-              - Path=/api/v1/survey/**
+            - Path=/api/v1/survey/**
           filters:
-              - RewritePath=/api/v1/survey/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/survey/?(?<path>.*),/$\{path}
         - id: chattingservice
           uri: lb://chattingservice
           predicates:
-              - Path=/api/v1/chat/**
+            - Path=/api/v1/chat/**
           filters:
-              - RewritePath=/api/v1/chat/?(?<path>.*),/$\{path}
+            - RewritePath=/api/v1/chat/?(?<path>.*),/$\{path}
 
 # 유레카 설정
 eureka:
