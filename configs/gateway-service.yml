@@ -57,9 +57,9 @@ spring:
         - id: chattingservice
           uri: lb://chattingservice
           predicates:
-              - Path=/api/v1/chatting/**
+              - Path=/api/v1/chat/**
           filters:
-              - RewritePath=/api/v1/chatting/?(?<path>.*),/$\{path}
+              - RewritePath=/api/v1/chat/?(?<path>.*),/$\{path}
 
 # 유레카 설정
 eureka:
