@@ -64,7 +64,7 @@ management:
 
 cors:
   allow:
-    origins: http://joyfarm.xyz
+    origins: 'http://localhost:7000,http://localhost:7001'
 
 springdoc:
   version: '1.0.0'
