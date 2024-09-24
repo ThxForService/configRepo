@@ -72,4 +72,4 @@ springdoc:
     path: /apidocs.html
     disable-swagger-default-url: true
   paths-to-match:
-    - /**
+    - ${PATHS_TO_MATCH:/survey}
